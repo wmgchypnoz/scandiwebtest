@@ -1,0 +1,20 @@
+@import "./product-add";
+@import "./product-list";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    #001029,
+    #091629,
+    #121b28,
+    #1a1f28,
+    #222427
+  );
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./second.js" defer></script>
+    <title>Product Add</title>
+  </head>
+  <body>
+    <header class="product-add-header">
+      <h1>Product Add</h1>
+      <div class="btn-section">
+        <button id="saveBtn" type="submit" form="product_form">Save</button>
+        <a href="./index.php"><button id="cancelBtn">Cancel</button></a>
+      </div>
+    </header>
+    <form id="product_form" action="./product-form.php" method="get">
+      <div class="fields">
+        <div class="input-field">
+          <div class="sku-input">
+            <label for="sku">SKU</label>
+            <input
+              type="text"
+              id="sku"
+              name="sku"
+              required
+              oninvalid="this.setCustomValidity('Please, submit required data')"
+              oninput="this.setCustomValidity('')"
+            />
+          </div>
+          <div class="name-input">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              oninvalid="this.setCustomValidity('Please, submit required data')"
+              oninput="this.setCustomValidity('')"
+            />
+          </div>
+          <div class="price-input">
+            <label for="price">Price</label>
+            <input
+              type="number"
+              id="price"
+              name="price"
+              required
+              placeholder="$"
+              oninvalid="this.setCustomValidity('Please, submit required data')"
+              oninput="this.setCustomValidity('')"
+            />
+          </div>
+          <div class="product_type">
+            <label for="productType">Type Switcher</label>
+            <select
+              name="productType"
+              id="productType"
+              name="productType"
+              required
+            >
+              <option value="">Type Switcher</option>
+              <option value="DVD">DVD</option>
+              <option value="Book">Book</option>
+              <option value="Furniture">Furniture</option>
+            </select>
+          </div>
+          <span id="product-review"></span>
+        </div>
+        <div class="type-specific">
+          <div id="DVD">
+            <div class="dvd-input">
+              <label for="size">Size (MB)</label>
+              <input
+                type="text"
+                id="size"
+                name="size"
+                placeholder="MB"
+                oninvalid="this.setCustomValidity('Please, submit required data')"
+                oninput="this.setCustomValidity('')"
+              />
+            </div>
+            <p>*Please, provide size in MB format*</p>
+          </div>
+          <div id="Furniture">
+            <div class="dim1">
+              <label for="height">Height (CM)</label>
+              <input
+                type="text"
+                id="height"
+                name="height"
+                placeholder="CM"
+                oninvalid="this.setCustomValidity('Please, submit required data')"
+                oninput="this.setCustomValidity('')"
+              />
+            </div>
+            <div class="dim2">
+              <label for="width">Width (CM)</label>
+              <input
+                type="text"
+                id="width"
+                name="width"
+                placeholder="CM"
+                oninvalid="this.setCustomValidity('Please, submit required data')"
+                oninput="this.setCustomValidity('')"
+              />
+            </div>
+            <div class="dim3">
+              <label for="length">Length (CM)</label>
+              <input
+                type="text"
+                id="length"
+                name="length"
+                placeholder="CM"
+                oninvalid="this.setCustomValidity('Please, submit required data')"
+                oninput="this.setCustomValidity('')"
+              />
+            </div>
+            <p>*Please, provide dimensions in HxWxL (CM) format*</p>
+          </div>
+          <div id="Book">
+            <div class="book-input">
+              <label for="weight">Weight (KG)</label>
+              <input
+                type="text"
+                id="weight"
+                name="weight"
+                placeholder="KG"
+                oninvalid="this.setCustomValidity('Please, submit required data')"
+                oninput="this.setCustomValidity('')"
+              />
+            </div>
+            <p>*Please, provide weight in KG format*</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
